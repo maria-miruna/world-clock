@@ -1,6 +1,61 @@
+body {
+  background: #f0f2eb;
+  font-family: "Roboto Slab", serif;
+}
 h1 {
   text-align: center;
+  font-size: 48px;
+  font-weight: 600;
+}
+select {
+  width: 100%;
+  display: block;
+  padding: 5px 8px;
+  margin: 20px 0;
+  border-radius: 4px;
+  font-size: 18px;
+  opacity: 0.6;
 }
 footer {
   text-align: center;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 700px;
+  padding: 30px;
+  margin: 0 auto;
+  margin-top: 60px;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("https://images.pexels.com/photos/7634436/pexels-photo-7634436.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+}
+.city-name {
+  font-size: 30px;
+}
+.date {
+  opacity: 0.8;
+}
+.time {
+  font-size: 42px;
+}
+
+.time small {
+  font-size: 24px;
+  vertical-align: middle;
+  line-height: 42px;
+}
+.github-link {
+  text-decoration: none;
+  color: #53a8b6;
+}
+
+.border-bottom-mine {
+  border-bottom: 1px dashed;
 }
