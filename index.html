@@ -17,6 +17,8 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data-1970-2030.min.js"></script>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -29,33 +31,44 @@
         <option>Taipei</option>
       </select>
       <div class="row">
-        <div class="col-6 pe-0 border-bottom-mine border-dark-subtle">
-          <div class="city-name">Miami 🇺🇸</div>
-          <div class="date">10th 2023</div>
+        <div class="col-6 mb-2 pe-0 border-bottom-mine border-dark-subtle">
+          <div class="city-name">Los Angeles 🇺🇸</div>
+          <div class="date" id="los-angeles-date">10th 2023</div>
         </div>
-        <div class="col-6 time text-end border-bottom-mine border-dark-subtle">
+        <div
+          class="col-6 mb-2 time text-end border-bottom-mine border-dark-subtle"
+          id="los-angeles-time"
+        >
           3:18:15 <small>PM</small>
         </div>
-        <div class="col-6 pe-0 border-bottom-mine border-dark-subtle">
+        <div class="col-6 mb-2 pe-0 border-bottom-mine border-dark-subtle">
           <div class="city-name">Sydney 🇦🇺</div>
-          <div class="date">10th 2023</div>
+          <div class="date" id="sydney-date">10th 2023</div>
         </div>
 
-        <div class="col-6 time text-end border-bottom-mine border-dark-subtle">
+        <div
+          class="col-6 mb-2 time text-end border-bottom-mine border-dark-subtle"
+          id="sydney-time"
+        >
           3:18:15 <small>PM</small>
         </div>
-        <div class="col-6 pe-0 border-bottom-mine border-dark-subtle">
+        <div class="col-6 mb-2 pe-0 border-bottom-mine border-dark-subtle">
           <div class="city-name">Shanghai 🇨🇳</div>
-          <div class="date">10th 2023</div>
+          <div class="date" id="shanghai-date">10th 2023</div>
         </div>
-        <div class="col-6 time text-end border-bottom-mine border-dark-subtle">
+        <div
+          class="col-6 mb-2 time text-end border-bottom-mine border-dark-subtle"
+          id="shanghai-time"
+        >
           3:18:15 <small>PM</small>
         </div>
         <div class="col-6 pe-0">
           <div class="city-name">Milan 🇮🇹</div>
-          <div class="date">10th 2023</div>
+          <div class="date" id="milan-date">10th 2023</div>
         </div>
-        <div class="col-6 time text-end">3:18:15 <small>PM</small></div>
+        <div class="col-6 time text-end" id="milan-time">
+          3:18:15 <small>PM</small>
+        </div>
       </div>
     </div>
     <footer>
