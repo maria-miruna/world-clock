@@ -24,13 +24,14 @@
   <body>
     <div class="container">
       <h1>World Clock</h1>
-      <select>
-        <option>Choose a city</option>
-        <option>Bucharest</option>
-        <option>Toronto</option>
-        <option>Taipei</option>
+      <select id="city">
+        <option value="">Choose a city</option>
+        <option value="Europe/Bucharest">Bucharest</option>
+        <option value="America/Toronto">Toronto</option>
+        <option value="Asia/Taipei">Taipei</option>
+        <option value="Pacific/Galapagos">Galapagos</option>
       </select>
-      <div class="row">
+      <div class="row" id="cities">
         <div class="col-6 mb-2 pe-0 border-bottom-mine border-dark-subtle">
           <div class="city-name">Los Angeles 🇺🇸</div>
           <div class="date" id="los-angeles-date">10th 2023</div>
