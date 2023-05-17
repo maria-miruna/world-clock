@@ -16,6 +16,9 @@ select {
   font-size: 18px;
   opacity: 0.6;
 }
+i {
+  pointer-events: none;
+}
 footer {
   text-align: center;
   margin-top: 5px;
@@ -24,8 +27,19 @@ footer {
 
 @media screen and (min-width: 768px) {
   .container {
-    margin-top: 60px !important;
     border-radius: 10px;
+  }
+  .city-name {
+    font-size: 30px !important;
+  }
+  .time {
+    font-size: 42px !important;
+  }
+
+  .time small {
+    font-size: 24px !important;
+    vertical-align: middle;
+    line-height: 42px;
   }
 }
 
@@ -33,6 +47,7 @@ footer {
   max-width: 700px;
   padding: 30px;
   margin: 0 auto;
+  margin-top: 60px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.5),
@@ -42,19 +57,19 @@ footer {
   background-size: cover;
 }
 .city-name {
-  font-size: 30px;
+  font-size: 20px;
 }
 .date {
   opacity: 0.8;
 }
 .time {
-  font-size: 42px;
+  font-size: 24px;
 }
 
 .time small {
-  font-size: 24px;
+  font-size: 13px;
   vertical-align: middle;
-  line-height: 42px;
+  line-height: 13px;
 }
 .github-link {
   text-decoration: none;
@@ -62,4 +77,16 @@ footer {
 }
 .border-bottom-mine {
   border-bottom: 1px dashed;
+}
+.border-top-mine {
+  border-top: 1px dashed;
+}
+.clear-button {
+  background-color: rgba(0, 0, 0, 0);
+  max-width: 15px;
+  box-sizing: unset;
+  border: none;
+  padding: 0;
+  color: #787878;
+  font-size: 24px;
 }

@@ -19,6 +19,10 @@
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data-1970-2030.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/d1ce047c47.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -27,49 +31,135 @@
       <select id="city">
         <option value="">Choose a city</option>
         <option value="current">My location 📍</option>
-        <option value="Europe/Bucharest">Bucharest</option>
-        <option value="America/Toronto">Toronto</option>
-        <option value="Asia/Taipei">Taipei</option>
-        <option value="Pacific/Galapagos">Galapagos</option>
+        <option value="bucharest">Bucharest</option>
+        <option value="toronto">Toronto</option>
+        <option value="kamchatka">Kamchatka</option>
+        <option value="galapagos">Galapagos</option>
       </select>
-      <div class="row" id="cities">
-        <div class="col-6 mb-2 pe-0 border-bottom-mine border-dark-subtle">
-          <div class="city-name">Los Angeles 🇺🇸</div>
-          <div class="date" id="los-angeles-date">10th 2023</div>
+      <div id="cities">
+        <div class="row d-none" id="current">
+          <div class="col-6 mb-2 pe-0 border-bottom-mine border-dark-subtle">
+            <div class="city-name"></div>
+            <div class="date" id="current-date"></div>
+          </div>
+          <div
+            class="col-6 mb-2 time text-end border-bottom-mine border-dark-subtle"
+          >
+            <span id="current-time"></span>
+            <button class="clear-button" id="clear-current">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
         </div>
-        <div
-          class="col-6 mb-2 time text-end border-bottom-mine border-dark-subtle"
-          id="los-angeles-time"
-        >
-          3:18:15 <small>PM</small>
+        <div class="row" id="los-angeles">
+          <div class="col-6 mb-2 pe-0 border-bottom-mine border-dark-subtle">
+            <div class="city-name">Los Angeles 🇺🇸</div>
+            <div class="date" id="los-angeles-date">10th 2023</div>
+          </div>
+          <div
+            class="col-6 mb-2 time text-end border-bottom-mine border-dark-subtle"
+          >
+            <span id="los-angeles-time"></span>
+            <button class="clear-button" id="clear-los-angeles">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
         </div>
-        <div class="col-6 mb-2 pe-0 border-bottom-mine border-dark-subtle">
-          <div class="city-name">Sydney 🇦🇺</div>
-          <div class="date" id="sydney-date">10th 2023</div>
+        <div class="row" id="sydney">
+          <div class="col-6 mb-2 pe-0 border-bottom-mine border-dark-subtle">
+            <div class="city-name">Sydney 🇦🇺</div>
+            <div class="date" id="sydney-date">10th 2023</div>
+          </div>
+          <div
+            class="col-6 mb-2 time text-end border-bottom-mine border-dark-subtle"
+          >
+            <span id="sydney-time"></span>
+            <button class="clear-button" id="clear-sydney">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
         </div>
-
-        <div
-          class="col-6 mb-2 time text-end border-bottom-mine border-dark-subtle"
-          id="sydney-time"
-        >
-          3:18:15 <small>PM</small>
+        <div class="row" id="shanghai">
+          <div class="col-6 mb-2 pe-0 border-bottom-mine border-dark-subtle">
+            <div class="city-name">Shanghai 🇨🇳</div>
+            <div class="date" id="shanghai-date">10th 2023</div>
+          </div>
+          <div
+            class="col-6 mb-2 time text-end border-bottom-mine border-dark-subtle"
+          >
+            <span id="shanghai-time"></span>
+            <button class="clear-button" id="clear-shanghai">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
         </div>
-        <div class="col-6 mb-2 pe-0 border-bottom-mine border-dark-subtle">
-          <div class="city-name">Shanghai 🇨🇳</div>
-          <div class="date" id="shanghai-date">10th 2023</div>
+        <div class="row d-none" id="bucharest">
+          <div class="col-6 mb-2 pe-0 border-bottom-mine border-dark-subtle">
+            <div class="city-name">Bucharest 🇷🇴</div>
+            <div class="date" id="bucharest-date">10th 2023</div>
+          </div>
+          <div
+            class="col-6 mb-2 time text-end border-bottom-mine border-dark-subtle"
+          >
+            <span id="bucharest-time"></span>
+            <button class="clear-button" id="clear-bucharest">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
         </div>
-        <div
-          class="col-6 mb-2 time text-end border-bottom-mine border-dark-subtle"
-          id="shanghai-time"
-        >
-          3:18:15 <small>PM</small>
+        <div class="row d-none" id="toronto">
+          <div class="col-6 mb-2 pe-0 border-bottom-mine border-dark-subtle">
+            <div class="city-name">Toronto 🇨🇦</div>
+            <div class="date" id="toronto-date">10th 2023</div>
+          </div>
+          <div
+            class="col-6 mb-2 time text-end border-bottom-mine border-dark-subtle"
+          >
+            <span id="toronto-time"></span>
+            <button class="clear-button" id="clear-toronto">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
         </div>
-        <div class="col-6 pe-0">
-          <div class="city-name">Milan 🇮🇹</div>
-          <div class="date" id="milan-date">10th 2023</div>
+        <div class="row d-none" id="kamchatka">
+          <div class="col-6 mb-2 pe-0 border-bottom-mine border-dark-subtle">
+            <div class="city-name">Kamchatka 🇷🇺</div>
+            <div class="date" id="kamchatka-date">10th 2023</div>
+          </div>
+          <div
+            class="col-6 mb-2 time text-end border-bottom-mine border-dark-subtle"
+          >
+            <span id="kamchatka-time"></span>
+            <button class="clear-button" id="clear-kamchatka">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
         </div>
-        <div class="col-6 time text-end" id="milan-time">
-          3:18:15 <small>PM</small>
+        <div class="row d-none" id="galapagos">
+          <div class="col-6 mb-2 pe-0 border-bottom-mine border-dark-subtle">
+            <div class="city-name">Galapagos 🏖️</div>
+            <div class="date" id="galapagos-date">10th 2023</div>
+          </div>
+          <div
+            class="col-6 mb-2 time text-end border-bottom-mine border-dark-subtle"
+          >
+            <span id="galapagos-time"></span>
+            <button class="clear-button" id="clear-galapagos">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+        </div>
+        <div class="row" id="milan">
+          <div class="col-6 mb-2 pe-0">
+            <div class="city-name">Milan 🇮🇹</div>
+            <div class="date" id="milan-date">10th 2023</div>
+          </div>
+          <div class="col-6 mb-2 time text-end">
+            <span id="milan-time"></span>
+            <button class="clear-button" id="clear-milan">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>
